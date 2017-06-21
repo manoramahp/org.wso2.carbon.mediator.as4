@@ -32,7 +32,7 @@ public class GZipCompressionDataHandler extends DataHandler {
     private String contentType;
 
     //default contentType.
-    private static String GZIP_COMPRESSION = "application/gzip";
+    public static String GZIP_COMPRESSION = "application/gzip";
 
     /**
      * Constructor which takes datasource.

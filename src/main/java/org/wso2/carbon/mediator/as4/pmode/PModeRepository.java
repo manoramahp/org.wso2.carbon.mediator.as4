@@ -140,7 +140,7 @@ public class PModeRepository implements FileListener {
             PMode pMode = (PMode) this.pModeUnmarshaller.unmarshal(pModeFile);
             if (pMode.getAgreement() == null || pMode.getAgreement().getName() == null
                 || pMode.getAgreement().getName().isEmpty()) {
-                log.warn("PMode file doesn't contain agreement element, hence ignoring the rile, file - "
+                log.warn("PMode file doesn't contain agreement element, hence ignoring the file, file - "
                          + pModeFile.getName());
                 return;
             }
@@ -213,7 +213,7 @@ public class PModeRepository implements FileListener {
              *
              * Those two scenarios cannot happen with this implementation
              */
-            log.warn("Duplicate PMode agreements found in two files, aggreement - "
+            log.warn("Duplicate PMode agreements found in two files, agreement - "
                      + pMode.getAgreement().getName());
         }
     }

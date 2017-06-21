@@ -52,6 +52,18 @@ public class PMode {
     @XmlElement(name="BusinessInfo")
     private BusinessInfo businessInfo;
 
+    @XmlElement(name="PayloadService")
+    private PayloadService payloadService;
+
+    @XmlElement(name="ErrorHandling")
+    private ErrorHandling errorHandling;
+
+    @XmlElement(name="ReceptionAwareness")
+    private ReceptionAwareness receptionAwareness;
+
+    @XmlElement(name="Security")
+    private Security security;
+
     public String getId() {
         return id;
     }
@@ -114,5 +126,37 @@ public class PMode {
 
     public void setBusinessInfo(BusinessInfo businessInfo) {
         this.businessInfo = businessInfo;
+    }
+
+    public PayloadService getPayloadService() {
+        return payloadService;
+    }
+
+    public void setPayloadService(PayloadService payloadService) {
+        this.payloadService = payloadService;
+    }
+
+    public ErrorHandling getErrorHandling() {
+        return errorHandling;
+    }
+
+    public void setErrorHandling(ErrorHandling errorHandling) {
+        this.errorHandling = errorHandling;
+    }
+
+    public ReceptionAwareness getReceptionAwareness() {
+        return receptionAwareness;
+    }
+
+    public void setReceptionAwareness(ReceptionAwareness receptionAwareness) {
+        this.receptionAwareness = receptionAwareness;
+    }
+
+    public Security getSecurity() {
+        return security;
+    }
+
+    public void setSecurity(Security security) {
+        this.security = security;
     }
 }

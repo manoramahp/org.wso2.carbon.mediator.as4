@@ -32,12 +32,12 @@ public class AS4Constants {
      */
     public static final String INBOUND_ENDPOINT_PARAMETER_AS4_PMODE_DEFAULT_LOCATION = "repository/conf/pModes/";
 
-
-
     public static final String COMPRESSION_TYPE = "CompressionType";
 
     public static final String MIME_TYPE = "MimeType";
 
+    //format is Type: urn:oasis:names:tc:ebcore:partyid-type:iso6523:<scheme id>
+    public static final String PARTY_ID_TYPE = "urn:oasis:names:tc:ebcore:partyid-type:iso6523:0151";
 
 //    public static final String INBOUND_AS4_PAYLOAD_DELIVERY_LOCATION = "inbound.as4.payload.delivery.location"; //todo parameter
 //    public static final String INBOUND_AS4_PAYLOAD_DELIVERY_DEFAULT_LOCATION = "inbound";
@@ -50,5 +50,6 @@ public class AS4Constants {
     public static final String AS4_RESPONSE_MESSAGE = "as4.response.message";
     public static final String AS4_ENDPOINT_ADDRESS = "as4.endpoint.address";
 
+    public static final String PMODE_PROPERTY_SUBSTRING = "PMode";
 
 }

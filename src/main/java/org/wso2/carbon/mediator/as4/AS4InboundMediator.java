@@ -86,7 +86,7 @@ public class AS4InboundMediator extends AbstractMediator {
             createTempStoreFolder();//to create temp store if not exist
             handleMessage(messageContext);
         } catch (AS4Exception e) {
-            handleError(messageContext, e);
+            AS4ErrorHandler.handleError(messageContext, e);
         }
 
         Axis2Sender.sendBack(messageContext);
