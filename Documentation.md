@@ -2,7 +2,6 @@
 
 ## PMode Parameters Supported by WSO2 ESB AS4 Custom Mediator
 
-|------------------------------------------------------------|--------------------------|
 |PMode Parameter                                             |     Supported or not     |
 |------------------------------------------------------------|--------------------------|
 |PMode.ID                                                    |       true               |
@@ -40,7 +39,6 @@
 |PMode.PayloadService.CompressionType                        |       true               |
 |PMode.ReceptionAwareness                                    |       true               |
 |PMode.ReceptionAwareness.Retry.Parameters                   |       true               |
-|---------------------------------------------------------------------------------------|
 
 
 ## Error Handling and Reception Awareness - PMode Parameter Configurations
