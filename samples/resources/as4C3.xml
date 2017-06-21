@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="as4C3"
+       transports="https"
+       startOnLoad="true">
+   <description/>
+   <target>
+      <inSequence>
+         <class name="org.wso2.carbon.mediator.as4.AS4InboundMediator">
+            <property name="pModesLocation" value=""/>
+            <property name="tempStoreFolder" value=""/>
+         </class>
+      </inSequence>
+   </target>
+</proxy>

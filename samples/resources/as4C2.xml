@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="as4C2"
+       transports="https http"
+       startOnLoad="true">
+   <description/>
+   <target>
+      <inSequence>
+         <class name="org.wso2.carbon.mediator.as4.temp.CustomClassMediator"/>
+         <property name="as4.endpoint.address"
+                   value="https://localhost:8244/services/as4C3"/>
+         <class name="org.wso2.carbon.mediator.as4.AS4OutboundMediator">
+            <property name="axis2ClientConfigLocation"
+                      value="repository/conf/axis2/as4.xml"/>
+            <property name="pModesLocation" value=""/>
+         </class>
+         <respond/>
+      </inSequence>
+   </target>
+</proxy>

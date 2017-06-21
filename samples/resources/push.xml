@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMode xmlns="http://wso2.org/schemas/2016/10/pmode"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:pMode="http://wso2.org/schemas/2016/10/pmode ../../repository/xsd/pmode.xsd">
+    <id>push</id>
+    <mep>http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/oneWay</mep>
+    <mepBinding>http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/push</mepBinding>
+    <Initiator>
+        <Party>org:wso2:example:company:A</Party>
+        <Role>Sender</Role>
+    </Initiator>
+    <Responder>
+        <Party>org:wso2:example:company:B</Party>
+        <Role>Receiver</Role>
+    </Responder>
+    <Agreement>
+        <name>http://wso2.org/examples/agreement0</name>
+    </Agreement>
+    <Protocol>
+        <!-- Change the URL below to reflect the location where the receiving MSH is listening for messages-->
+        <Address>https://localhost:8244/services/as4C3</Address>
+    </Protocol>
+
+    <BusinessInfo>
+        <Action>StoreMessage</Action>
+        <Service>Examples</Service>
+    </BusinessInfo>
+
+    <PayloadService>
+        <CompressionType>application/gzip</CompressionType>
+    </PayloadService>
+
+    <ErrorHandling>
+        <Report>
+            <AsResponse>true</AsResponse>
+            <ProcessErrorNotifyProducer>true</ProcessErrorNotifyProducer>
+            <DeliveryFailuresNotifyProducer>true</DeliveryFailuresNotifyProducer>
+        </Report>
+    </ErrorHandling>
+
+    <ReceptionAwareness>
+        <Retry>
+            <Parameters>maxretries=2;period=5000</Parameters>
+        </Retry>
+    </ReceptionAwareness>
+
+    <Security>
+        <SendReceipt>true</SendReceipt>
+    </Security>
+</PMode>
