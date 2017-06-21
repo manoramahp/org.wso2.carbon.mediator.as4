@@ -64,8 +64,10 @@ Eg: - **maxretries=3;period=5000**
 ## Support for setting PMode values dynamically
    In the corner-2 ESB, property values should be set as below before the mediator org.wso2.carbon.mediator.as4.AS4OutboundMediator
 
-   ```<property name="/*[name()='PMode']/*[name()='Agreement']/*[name()='Name']"
-                      value="http://wso2.org/examples/agreement1"/>```
+``
+   <property name="/*[name()='PMode']/*[name()='Agreement']/*[name()='Name']"
+                      value="http://wso2.org/examples/agreement1"/>
+ ``                     
 
    Property name should be the XPath expression of the corresponding PMode value
    Property value is the new value to be set as the PMode value
