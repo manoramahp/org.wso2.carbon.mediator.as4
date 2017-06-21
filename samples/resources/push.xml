@@ -14,7 +14,7 @@
         <Role>Receiver</Role>
     </Responder>
     <Agreement>
-        <name>http://wso2.org/examples/agreement0</name>
+        <Name>http://wso2.org/examples/agreement0</Name>
     </Agreement>
     <Protocol>
         <!-- Change the URL below to reflect the location where the receiving MSH is listening for messages-->

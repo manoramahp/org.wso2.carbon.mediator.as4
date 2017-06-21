@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Agreement {
 
-    @XmlElement(name="name")
+    @XmlElement(name="Name")
     private String name;
 
     public String getName() {
