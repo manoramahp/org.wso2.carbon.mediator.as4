@@ -164,8 +164,6 @@ public class AS4Connection {
             }
         }
 
-        // initialize and set Options
-//        Options options = new Options();
         Options options = msgCtx.getOptions();
         options.setTo(new EndpointReference(url.toString()));
 
@@ -189,7 +187,7 @@ public class AS4Connection {
         methodParams.setParameter(HttpMethodParams.RETRY_HANDLER, httpMethodRetryHandler);
         options.setProperty(HTTPConstants.HTTP_METHOD_PARAMS, methodParams);
 
-        // initialize the Sender
+        // Initialize the Sender
         ServiceClient serviceClient;
         OperationClient opClient;
         try {

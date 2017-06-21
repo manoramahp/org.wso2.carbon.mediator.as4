@@ -113,9 +113,6 @@ public class PModeRepository implements FileListener {
         }
         for (final File file : folder.listFiles()) {
             if (file.isDirectory()) {
-//                log.info("PMode directory has sub directories, traversing through them as well, directory - "
-//                         + file.getName());
-//                traversePModeDirectory(file);
                 log.warn("PMode directory has sub directories, skipping those sub directories, directory - "
                          + file.getName());
             } else {

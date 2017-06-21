@@ -172,8 +172,6 @@ public class AS4InboundMediator extends AbstractMediator {
         OMNode node = null;
         try {
             Marshaller messagingMarshaller = jaxbMessagingContext.createMarshaller();
-
-//          OMNode node = XMLUtils.toOM(in);
             node = AS4Utils.getOMNode(messagingMarshaller, responseMessaging);
         } catch (Exception e) {
             throw new AS4Exception("Error generating response for the message, " + e.getMessage(), AS4ErrorMapper.ErrorCode.EBMS0004, messageId);
@@ -228,8 +226,6 @@ public class AS4InboundMediator extends AbstractMediator {
         OMNode node = null;
         try {
             Marshaller messagingMarshaller = jaxbMessagingContext.createMarshaller();
-
-//          OMNode node = XMLUtils.toOM(in);
             node = AS4Utils.getOMNode(messagingMarshaller, responseMessaging);
         } catch (Exception ex) {
             if (log.isDebugEnabled()) {

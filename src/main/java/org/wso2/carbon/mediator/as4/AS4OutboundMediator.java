@@ -117,10 +117,8 @@ public class AS4OutboundMediator extends AbstractMediator {
             org.apache.axis2.context.MessageContext responseContext;
 
             boolean sendErrorResponse = pMode.getSecurity() != null && pMode.getSecurity().isSendReceipt();
-            boolean deliveryFailuresNotifyProducer = false;
             boolean processErrorsNotifyProducer = false;
             if(pMode.getErrorHandling() != null && pMode.getErrorHandling().getReport() != null) {
-                deliveryFailuresNotifyProducer = pMode.getErrorHandling().getReport().isDeliveryFailuresNotifyProducer();
                 processErrorsNotifyProducer = pMode.getErrorHandling().getReport().isProcessErrorNotifyProducer();
             }
 
@@ -155,7 +153,7 @@ public class AS4OutboundMediator extends AbstractMediator {
             Messaging responseMsg = (Messaging) messagingUnMarshaller.unmarshal(userMessageStream);
 
             axis2MsgCtx.setEnvelope(responseContext.getEnvelope());
-//            messageContext.setEnvelope(responseContext.getEnvelope());
+
             messageContext.setProperty(AS4Constants.AS4_RESPONSE_MESSAGE, responseMsg.getSignalMessage());
 
             messageContext.setProperty(Constants.Configuration.ENABLE_SWA, false);
@@ -317,7 +315,6 @@ public class AS4OutboundMediator extends AbstractMediator {
         To to = new To();
 
         PartyId toPartyId = new PartyId();
-//        toPartyId.setType(AS4Constants.PARTY_ID_TYPE);
 //        toPartyId.setType(AS4Constants.PARTY_ID_TYPE);
         toPartyId.setValue(pMode.getResponder().getParty());
 

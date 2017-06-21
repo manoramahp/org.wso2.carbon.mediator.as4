@@ -81,7 +81,6 @@ public class AS4Utils {
      * @throws org.wso2.carbon.mediator.as4.AS4Exception
      */
     public static void validateMessaging(Messaging messaging) throws AS4Exception {
-        //todo validate incoming message
         if (messaging == null) {
             throw new AS4Exception("Incoming messaging element is invalid", AS4ErrorMapper.ErrorCode.EBMS0001, null);
         }

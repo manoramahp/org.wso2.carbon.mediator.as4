@@ -19,9 +19,6 @@ package org.wso2.carbon.mediator.as4.msg;
 
 import java.util.UUID;
 
-/**
- * Created by rajith on 9/21/16.
- */
 public class MessageIdGenerator {
     public static String createMessageId() {
         // Generate a UUID as the msg-id
