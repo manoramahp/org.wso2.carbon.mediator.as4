@@ -46,5 +46,6 @@
         <soapenv:Body/>
     </soapenv:Envelope>
 ``
+
 7) You will be able to see the sent payload in the following location in ESB node-2.
     <ESB_HOME>/tempInbound/
