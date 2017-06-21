@@ -26,6 +26,7 @@
 
 6) Send the following Soap request to the ESB node-1
 
+``
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
         <soapenv:Header/>
         <soapenv:Body>
@@ -44,6 +45,6 @@
             </as4Msg>
         <soapenv:Body/>
     </soapenv:Envelope>
-
+``
 7) You will be able to see the sent payload in the following location in ESB node-2.
     <ESB_HOME>/tempInbound/
